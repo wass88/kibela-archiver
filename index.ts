@@ -76,7 +76,8 @@ class Archive {
     });
     const page = `${html_header}
     <h1> <a href="https://kmc.kibe.la">KMC Kibela</a> Archive </h1>
-    <ul>${contents.join("")}</ul>`;
+    <ul>${contents.join("")}</ul>
+    <a href="https://github.com/wass88/kibela-archiver">Source Code</a>`;
 
     fs.writeFileSync(index_file, page);
   }
