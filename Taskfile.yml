@@ -1,0 +1,10 @@
+version: "3"
+
+tasks:
+  archive:
+    cmds:
+      - bun run index.ts ./raw_data/kibela-kmc-0 ./dst
+  upload:
+    cmds:
+      - cp kibela-kmc-0.zip ./dst
+      - rsync -avz ./dst/ kmc:~kmc/private_html/kibela_archive/
