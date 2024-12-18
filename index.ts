@@ -4,7 +4,16 @@ import parseMD from "parse-md";
 import { marked } from "marked";
 
 const html_header = `<!DOCTYPE html>
-<meta charset="utf-8">`;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+>
+<style>a { text-underline-offset: 0.3em; }</style>
+<title>KMC Kibela Archive</title>
+<main class="container">
+`;
 
 function getNotes(dir: string): Archive {
   const notes_dir = path.join(dir, "notes");
